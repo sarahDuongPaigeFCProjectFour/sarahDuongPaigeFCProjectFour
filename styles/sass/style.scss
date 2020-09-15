@@ -1,5 +1,106 @@
 @import "setup";
 
 * {
-    border: 1px red solid;
+    // border: 1px red solid;
 }
+
+// HEADER
+
+header {
+
+    height: auto;
+
+    h1 {
+        font-size: 50px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    
+    img {
+        width: 100%;
+    }
+
+}
+
+// MAIN
+
+main {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+    .wrapper {
+            margin: 0 auto;
+            max-width: 1080px;
+            width: 30%;
+    }
+
+        .pokedex {
+            display: flex;
+            flex-direction: column;
+            height: 95vh;
+            border: 8px black solid;
+            border-radius: 20px;
+            align-content: flex-end;
+        }
+
+            .window {
+                // background: white;
+                height: 25%;
+                // border: 3px solid black;
+                // border-radius: 10px;
+                // margin: 10px;
+            }
+
+                .windowWrapper {
+                    margin: 0 auto;
+                    width: 90%;
+                    max-width: 100%;
+                }
+
+                    h2 {
+                        margin-bottom: 0;
+                    }
+
+                    h3 {
+                        margin:0;
+                    }
+
+            .imageContainer {
+                position: relative;
+                display: flex;
+                z-index: 2;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                height: 100px;
+                top: 10%;
+            }
+
+                .image {
+                    background: white;
+                    border: 3px black solid;
+                    border-radius: 50%;
+                    height: 125px;
+                    width: 125px;
+                }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+            .info {
+                // position: relative;
+                border-radius: 20px;
+                height: 60%;
+                background: rgba(152, 185, 136, 0.5);
+                width: 100%;
+                // z-index: 1;
+                // bottom: 26%;
+            }
+
+

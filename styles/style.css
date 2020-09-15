@@ -235,6 +235,106 @@ html {
   overflow: hidden;
 }
 
-* {
-  border: 1px red solid;
+header {
+  height: auto;
+}
+
+header h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header img {
+  width: 100%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 30%;
+}
+
+.pokedex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 95vh;
+  border: 8px black solid;
+  border-radius: 20px;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.window {
+  height: 25%;
+}
+
+.windowWrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 100%;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+.imageContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  top: 10%;
+}
+
+.image {
+  background: white;
+  border: 3px black solid;
+  border-radius: 50%;
+  height: 125px;
+  width: 125px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  border-radius: 20px;
+  height: 60%;
+  background: rgba(152, 185, 136, 0.5);
+  width: 100%;
 }

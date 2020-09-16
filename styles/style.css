@@ -235,6 +235,10 @@ html {
   overflow: hidden;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 header {
   height: auto;
 }
@@ -244,6 +248,7 @@ header h1 {
   margin: 0;
   padding: 0;
   text-align: center;
+  color: white;
 }
 
 header img {
@@ -296,10 +301,12 @@ main {
 
 h2 {
   margin-bottom: 0;
+  font-size: 3.5rem;
 }
 
 h3 {
   margin: 0;
+  font-size: 2.5rem;
 }
 
 .imageContainer {
@@ -333,8 +340,61 @@ img {
 }
 
 .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   border-radius: 20px;
   height: 60%;
-  background: rgba(152, 185, 136, 0.5);
+  background: white;
   width: 100%;
+  background: rgba(152, 185, 136, 0.5);
+  height: 100%;
+}
+
+.infoWrapper {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 80%;
+}
+
+.infoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h4 {
+  margin: 15px 0 0 0;
+  font-size: 2.5rem;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  font-size: 1.5rem;
 }

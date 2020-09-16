@@ -24,8 +24,8 @@
             <!-- WINDOW -->
             <section class="window">
                 <div class="windowWrapper">
-                    <h2>Pikachu Bitch</h2>
-                    <h3>#25,897</h3>
+                    <h2 id="pokemonName"></h2>
+                    <h3 id="pokemonID"></h3>
                 </div>
             </section>
 
@@ -33,7 +33,7 @@
 
             <section class="imageContainer">
                 <div class="image">
-                    <img src="./styles/images/pikachuFront.png" alt="">
+                    <img src="./styles/images/pikachuFront.png" alt="" id="pokemonMainImage">
                 </div>
             </section>
 
@@ -43,23 +43,20 @@
                 <div class="infoGrid infoWrapper">
                     <div class="textContainer ability">
                         <h4>Ability</h4>
-                        <p>Lorem, ipsum.</p>
+                        <p id="pokeAbility">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, aspernatur!</p>
                     </div>
                     <div class="textContainer height">
                         <h4>Height</h4>
-                        <p>Lorem, ipsum.</p>
+                        <p id="pokeHeight">Lorem, ipsum.</p>
                     </div>
                     <div class="textContainer weight">
-                        <h3>Weight</h3>
-                        <p>Lorem, ipsum.</p>
+                        <h4 >Weight</h4>
+                        <p id="pokeWeight">Lorem, ipsum.</p>
                     </div>
                     <div class="textContainer moves">
-                        <h4>Moves</span></h4>
+                        <h4 id="pokeMoves">Moves</span></h4>
                         <ul>
-                            <li>Lorem, ipsum.</li>
-                            <li>Lorem, ipsum.</li>
-                            <li>Lorem, ipsum.</li>
-                            <li>Lorem, ipsum.</li>
+                          <!-- dynamically generated with JS -->
                         </ul>
                     </div>
                     <div class="textContainer evolutions">
@@ -72,5 +69,8 @@
             </section>
         </div>
     </main>
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="./script.js"></script>
 </body>
 </html>

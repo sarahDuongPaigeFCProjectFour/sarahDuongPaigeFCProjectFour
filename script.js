@@ -34,15 +34,15 @@ pokedexApp.init = function() {
       $("#pokeMoves").append(`<li>${move1}</li>`)
 
       const move2 = result.moves[1].move.name;
-      $("#pokeMoves").append(`<li>${move2}</li>`)
+      $("#pokeMoves").append(`<li>${move2}</li>`);
 
       // Photo ** needs to be fixed
 
-      const mainImage = result.sprites.other.offical-artwork.front_default;
+      const mainImage = result.sprites.other['official-artwork'].front_default;
 
-      // $("#pokemonMainImage").attr("src");
+      $("#pokemonMainImage").attr("src", mainImage);
 
-      console.log(mainImage)
+ 
 
 
     });

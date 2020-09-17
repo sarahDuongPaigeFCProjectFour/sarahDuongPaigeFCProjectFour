@@ -16,6 +16,35 @@ pokedexApp.init = function() {
       // testing if name appends
       $("#pokemonName").text(result.name);
       $('#pokemonID').text(result.id);
+
+      // Ability
+      const ability1 = result.abilities[0].ability.name;
+      $("#pokeAbility").text(ability1);
+
+      // Height
+      $("#pokeHeight").text(result.height);
+      
+      // Weight
+      $("#pokeWeight").text(result.weight);
+
+      // Moves (possibly randomize??)
+      // TO DO: FUNCTION
+
+      const move1 = result.moves[0].move.name;
+      $("#pokeMoves").append(`<li>${move1}</li>`)
+
+      const move2 = result.moves[1].move.name;
+      $("#pokeMoves").append(`<li>${move2}</li>`)
+
+      // Photo ** needs to be fixed
+
+      const mainImage = result.sprites.other.offical-artwork.front_default;
+
+      // $("#pokemonMainImage").attr("src");
+
+      console.log(mainImage)
+
+
     });
   }
   pokemonChoice(genRandomNum())

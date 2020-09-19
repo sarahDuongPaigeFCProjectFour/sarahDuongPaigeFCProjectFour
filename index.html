@@ -1,99 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="./styles/style.css">
-
-</head>
-<body>
-
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <!-- HEADER -->
 
     <header>
-        <div class="headerWrapper">
-          <div class="headerContent">
-            <h1>Pokemon Generator</h1>
-            <button class="getStarted">Randomize me!</button>
-          </div>
+      <div class="headerWrapper">
+        <div class="headerContent">
+          <h1>Pokemon Generator</h1>
+          <button class="getStarted">Randomize me!</button>
         </div>
+      </div>
     </header>
 
     <!-- MAIN -->
 
     <main>
-        <div class="pokedex wrapper">
-            <!-- WINDOW -->
-            <section class="window">
-                <div class="windowWrapper windowContainer">
-                    <div class="container">
-                        <h2 id="pokemonName"></h2>
-                        <h3 id="pokemonID"></h3>
-                    </div>
-                    <div class="spriteContainer" id="spriteContainer">
-                        <!-- Dynamically adding sprites with JS -->
-                        <div class ="sprites" id="frontSprite"></div>
-                        <div class ="sprites" id="backSprite"></div>
-                    </div>
-                </div>
+      <div class="pokedex wrapper">
+        <!-- WINDOW -->
+        <section class="window">
+          <div class="windowWrapper windowContainer">
+            <div class="container">
+              <h2 id="pokemonName"></h2>
+              <h3 id="pokemonID"></h3>
+              <ul id="pokemonType"></ul>
+            </div>
+            <div class="spriteContainer" id="spriteContainer">
+              <!-- Dynamically adding sprites with JS -->
+              <div class="sprites" id="frontSprite"></div>
+              <div class="sprites" id="backSprite"></div>
+            </div>
+          </div>
+          <!-- IMAGE -->
+          <section class="imageContainer">
+            <div class="image">
+              <img id="pokemonMainImage" />
+            </div>
+          </section>
+        </section>
 
-                <section class="imageContainer">
-                    <div class="image">
-                        <img id="pokemonMainImage">
-                    </div>
-                </section>
+        <!-- INFO -->
 
-            </section>
-
-
-
-            <!-- IMAGE -->
-
-            <!-- <section class="imageContainer">
-                <div class="image">
-                    <img id="pokemonMainImage">
-                </div>
-            </section> -->
-
-            <!-- INFO -->
-
-            <section class="info">
-                <div class="infoGrid infoWrapper">
-                    <div class="textContainer ability">
-                        <h4>Ability</h4>
-                        <p id="pokeAbility"></p>
-                    </div>
-                    <div class="textContainer height">
-                        <h4>Height</h4>
-                        <p id="pokeHeight">Lorem, ipsum.</p>
-                    </div>
-                    <div class="textContainer weight">
-                        <h4 >Weight</h4>
-                        <p id="pokeWeight">Lorem, ipsum.</p>
-                    </div>
-                    <div class="textContainer moves">
-                        <h4>Moves</span></h4>
-                        <ul id="pokeMoves">
-                            
-                        </ul>
-                    </div>
-                    <div class="textContainer evolutions">
-                        <h4>Evolution</h4>
-                        <ol>
-                            <li>Lorem maybe.</li>
-                        </ol>   
-                    </div>
-                    <div class="btnContainer">
-                        <button class="btnRandom">Get new Pokemon!</button>
-                    </div>
-                </div>
-            </section>
-        </div>
+        <section class="info">
+          <div class="infoGrid infoWrapper">
+            <div class="textContainer ability">
+              <h4>Ability</h4>
+              <p id="pokeAbility"></p>
+            </div>
+            <div class="textContainer height">
+              <h4>Height</h4>
+              <p id="pokeHeight"></p>
+            </div>
+            <div class="textContainer weight">
+              <h4>Weight</h4>
+              <p id="pokeWeight"></p>
+            </div>
+            <div class="textContainer moves">
+              <h4>Moves</h4>
+              <ul id="pokeMoves"></ul>
+            </div>
+            <div class="textContainer evolutions">
+              <h4>Evolution</h4>
+              <ol>
+                <li>Lorem maybe.</li>
+              </ol>
+            </div>
+            <div class="btnContainer">
+              <button class="btnRandom">Get new Pokemon!</button>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
 
-    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.0.min.js"
+      integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+      crossorigin="anonymous"
+    ></script>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>

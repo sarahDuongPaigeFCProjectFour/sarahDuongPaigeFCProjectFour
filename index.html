@@ -13,8 +13,12 @@
     <!-- HEADER -->
 
     <header>
-        <h1>Pokemon Generator</h1>
-        <button>Randomize me!</button>
+        <div class="headerWrapper">
+          <div class="headerContent">
+            <h1>Pokemon Generator</h1>
+            <button class="getStarted">Randomize me!</button>
+          </div>
+        </div>
     </header>
 
     <!-- MAIN -->
@@ -23,15 +27,15 @@
         <div class="pokedex wrapper">
             <!-- WINDOW -->
             <section class="window">
-                <div class="windowWrapper">
+                <div class="windowWrapper windowContainer">
                     <div class="container">
                         <h2 id="pokemonName"></h2>
                         <h3 id="pokemonID"></h3>
                     </div>
-                    <div class="container" id="spriteContainer">
+                    <div class="spriteContainer" id="spriteContainer">
                         <!-- Dynamically adding sprites with JS -->
-                        <div class="frontSprite"></div>
-                        <div class="backSprite"></div>
+                        <div class ="sprites" id="frontSprite"></div>
+                        <div class ="sprites" id="backSprite"></div>
                     </div>
                 </div>
             </section>

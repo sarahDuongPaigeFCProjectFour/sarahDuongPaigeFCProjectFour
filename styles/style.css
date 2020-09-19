@@ -310,7 +310,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 95vh;
+  min-height: 95vh;
   border: 8px black solid;
   border-radius: 20px;
   -webkit-box-pack: center;
@@ -320,6 +320,7 @@ main {
 
 .window {
   height: 25%;
+  color: white;
 }
 
 .windowWrapper {
@@ -331,6 +332,7 @@ main {
 h2 {
   margin: 0;
   font-size: 3.5rem;
+  text-transform: capitalize;
 }
 
 h3 {
@@ -338,12 +340,17 @@ h3 {
   font-size: 2.5rem;
 }
 
+.pokedex {
+  background-color: #ee1515;
+}
+
 .imageContainer {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  z-index: 2;
+  margin-bottom: -60px;
+  z-index: 1;
+  padding-top: 100px;
   width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -351,16 +358,15 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
-  top: 10%;
 }
 
 .image {
   background: white;
   border: 3px black solid;
   border-radius: 50%;
-  height: 125px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
+  z-index: 2;
 }
 
 img {
@@ -394,22 +400,11 @@ img {
 }
 
 .info {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 20px;
-  height: 60%;
   background: white;
   width: 100%;
-  background: rgba(152, 185, 136, 0.5);
-  height: 100%;
   padding-top: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  min-height: 70vh;
 }
 
 .infoWrapper {
@@ -438,6 +433,20 @@ img {
   grid-column: span 2;
 }
 
+.infoGrid .btnContainer {
+  grid-column: span 2;
+}
+
+.infoGrid .btnContainer .btnRandom {
+  width: 60%;
+  padding: 10px 0;
+}
+
+.infoGrid .height p,
+.infoGrid .weight p {
+  text-transform: lowercase;
+}
+
 h4 {
   margin: 0;
   font-size: 2.5rem;
@@ -452,9 +461,11 @@ ol {
 
 li {
   list-style-type: none;
+  text-transform: capitalize;
 }
 
 p {
   margin: 0;
   font-size: 1.6rem;
+  text-transform: capitalize;
 }

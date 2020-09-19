@@ -58,11 +58,11 @@ main {
 }
 
 .pokedex {
-    max-width: 40vw;
-    min-width: 400px;
+  max-width: 40vw;
+  min-width: 400px;
   display: flex;
   flex-direction: column;
-  height: 95vh;
+  min-height: 95vh;
   border: 8px black solid;
   border-radius: 20px;
   justify-content: center;
@@ -71,6 +71,7 @@ main {
 // WINDOW
 .window {
   height: 25%;
+  color: white;
 }
 
 .windowWrapper {
@@ -82,6 +83,7 @@ main {
 h2 {
   margin: 0;
   font-size: 3.5rem;
+  text-transform: capitalize;
 }
 
 h3 {
@@ -91,23 +93,27 @@ h3 {
 
 // IMAGE AND IMAGE CONTAINER
 
+.pokedex {
+  background-color: #ee1515;
+}
+
 .imageContainer {
-  position: relative;
   display: flex;
-  z-index: 2;
+  margin-bottom: -60px;
+  z-index: 1;
+  padding-top: 100px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  top: 10%;
 }
 
 .image {
   background: white;
   border: 3px black solid;
   border-radius: 50%;
-  height: 125px;
-  width: 125px;
+  height: 200px;
+  width: 200px;
+  z-index: 2;
 }
 
 img {
@@ -136,16 +142,11 @@ img {
 // INFO
 
 .info {
-  justify-content: center;
-  align-items: center;
   border-radius: 20px;
-  height: 60%;
   background: white;
   width: 100%;
-  background: rgba(152, 185, 136, 0.5);
-  height: 100%;
   padding-top: 75px;
-  display: flex;
+  min-height: 70vh;
 }
 
 .infoWrapper {
@@ -166,6 +167,18 @@ img {
     .evolutions {
         grid-column: span 2;
     }
+    .btnContainer {
+      grid-column: span 2;
+      .btnRandom {
+        width: 60%;
+        padding: 10px 0;
+      }
+    }
+    .height p,
+    .weight p {
+      text-transform: lowercase;
+    }
+    
 }
 
 h4 {
@@ -182,9 +195,11 @@ ol {
 
 li {
   list-style-type: none;
+  text-transform: capitalize;
 }
 
 p {
   margin: 0;
   font-size: 1.6rem;
+  text-transform: capitalize;
 }

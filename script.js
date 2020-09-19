@@ -7,7 +7,10 @@ pokedexApp.init = function () {
 
   pokedexApp.pokemonChoice(pokeNum);
 
-  // 
+  $(".btnRandom").on("click", function(){
+    pokedexApp.clearInfo();
+    pokedexApp.buttonRandom();
+  })
   
 };
 
@@ -34,14 +37,16 @@ pokedexApp.pokemonChoice = function (id) {
 pokedexApp.displayInfo = function (poke) {
   // Name and ID
   $("#pokemonName").text(poke.name);
-  $("#pokemonID").text(poke.id);
+  $("#pokemonID").text(`#${poke.id}`);
   // Ability
   const ability1 = poke.abilities[0].ability.name;
   $("#pokeAbility").text(ability1);
   // Height
-  $("#pokeHeight").text(poke.height);
+  const heightCM = (poke.height * 10)
+  $("#pokeHeight").text(`${heightCM} cm`);
   // Weight
-  $("#pokeWeight").text(poke.weight);
+  const weightKG = (poke.weight * 0.1)
+  $("#pokeWeight").text(`${weightKG} kg`);
   // Photo (main image)
   const mainImage = poke.sprites.other["official-artwork"].front_default;
   // changed the src attr to point to the retrieved mainImage
@@ -54,6 +59,13 @@ pokedexApp.displayInfo = function (poke) {
   // Show sprites
   pokedexApp.showSprites(poke);
 };
+
+// 
+pokedexApp.clearInfo = function(){
+  $(".textContainer ul").empty();
+  $('.sprites').empty();
+
+}
 
 // Function to display sprites
 pokedexApp.showSprites = function (poke) {
@@ -73,6 +85,13 @@ pokedexApp.shinySprites = function(poke) {
   console.log('hi');
   $('#frontSprite img').attr('src', poke.sprites.front_shiny);
   $('#backSprite img').attr('src', poke.sprites.back_shiny)
+}
+
+// Button randomizer
+
+pokedexApp.buttonRandom = function(){
+  const ranNum = pokedexApp.genRandomNum();
+  pokedexApp.pokemonChoice(ranNum);
 }
 
 

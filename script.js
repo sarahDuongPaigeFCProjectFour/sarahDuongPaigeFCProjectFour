@@ -42,9 +42,6 @@ pokedexApp.init = function() {
 
       $("#pokemonMainImage").attr("src", mainImage);
 
- 
-
-
     });
   }
   pokemonChoice(genRandomNum())

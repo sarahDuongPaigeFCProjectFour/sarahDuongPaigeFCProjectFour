@@ -240,7 +240,7 @@ html {
 }
 
 header {
-  height: auto;
+  height: 100vh;
 }
 
 header h1 {
@@ -248,7 +248,7 @@ header h1 {
   margin: 0;
   padding: 0;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 header img {
@@ -370,8 +370,8 @@ img {
 .infoGrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   gap: 40px 20px;
 }
 

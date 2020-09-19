@@ -60,12 +60,9 @@ main {
 .pokedex {
   max-width: 40vw;
   min-width: 400px;
-  display: flex;
-  flex-direction: column;
-  min-height: 95vh;
+
   border: 8px black solid;
   border-radius: 20px;
-  justify-content: center;
 }
 
 // WINDOW
@@ -145,8 +142,7 @@ img {
   border-radius: 20px;
   background: white;
   width: 100%;
-  padding-top: 75px;
-  min-height: 70vh;
+  padding: 75px 0;
 }
 
 .infoWrapper {

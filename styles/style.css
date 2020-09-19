@@ -303,19 +303,8 @@ main {
 .pokedex {
   max-width: 40vw;
   min-width: 400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 95vh;
   border: 8px black solid;
   border-radius: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .window {
@@ -403,8 +392,7 @@ img {
   border-radius: 20px;
   background: white;
   width: 100%;
-  padding-top: 75px;
-  min-height: 70vh;
+  padding: 75px 0;
 }
 
 .infoWrapper {

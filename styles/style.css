@@ -297,7 +297,7 @@ main {
 .wrapper {
   margin: 0 auto;
   max-width: 1080px;
-  width: 35%;
+  width: 30%;
 }
 
 .pokedex {
@@ -419,6 +419,7 @@ img {
 }
 
 .infoGrid {
+  text-align: center;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;

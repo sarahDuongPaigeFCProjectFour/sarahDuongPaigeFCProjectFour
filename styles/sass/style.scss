@@ -54,7 +54,7 @@ main {
 .wrapper {
   margin: 0 auto;
   max-width: 1080px;
-  width: 35%;
+  width: 30%;
 }
 
 .pokedex {
@@ -155,6 +155,7 @@ img {
 }
 
 .infoGrid {
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px 20px;

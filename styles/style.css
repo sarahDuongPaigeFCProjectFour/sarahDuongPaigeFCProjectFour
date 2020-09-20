@@ -239,6 +239,11 @@ html {
   font-size: 62.5%;
 }
 
+header {
+  background-image: url("../assets/143432-nature-Pokemon-748x468.jpg");
+  background-size: cover;
+}
+
 header .headerWrapper {
   max-width: 1080px;
   margin: 0 auto;

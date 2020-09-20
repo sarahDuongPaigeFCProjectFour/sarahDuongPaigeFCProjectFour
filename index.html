@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
@@ -14,7 +14,11 @@
       <div class="headerWrapper">
         <div class="headerContent">
           <h1>Pokemon Generator</h1>
-          <button class="getStarted">Randomize me!</button>
+          <button class="getStarted">Let's start!</button>
+          <audio controls>
+            <source src="./assets/pokeMusic.mp3" type="audio/mpeg">
+          </audio>
+          <!-- <img class="gif" src="./assets/pikaGif.gif" alt="Pikachu running"> -->
         </div>
       </div>
     </header>
@@ -29,7 +33,7 @@
             <div class="container">
               <h2 id="pokemonName"></h2>
               <h3 id="pokemonID"></h3>
-              <ul id="pokemonType"></ul>
+              <ul id="pokemonType" class="pokemonTypes"></ul>
             </div>
             <div class="spriteContainer" id="spriteContainer">
               <!-- Dynamically adding sprites with JS -->
@@ -64,7 +68,7 @@
             </div>
             <div class="textContainer moves">
               <h4>Moves</h4>
-              <ul id="pokeMoves"></ul>
+              <ul id="pokeMoves" class="pokeMoves"></ul>
             </div>
             <div class="textContainer evolutions">
               <h4>Evolution</h4>

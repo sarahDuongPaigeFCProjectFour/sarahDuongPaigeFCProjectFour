@@ -7,10 +7,15 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 // HEADER aka landing page 
 
 header {
-  background-image: url('../assets/143432-nature-Pokemon-748x468.jpg');
+  height: 100vh;
+  background-image: url('../assets/skyBackground.jpg');
   background-size: cover;
   .headerWrapper {
     max-width: 1080px;
@@ -23,6 +28,9 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    .getStarted {
+      margin-top: 50px;
+    }
     button {
       width: 40%;
       font-size: 3rem;
@@ -30,15 +38,25 @@ header {
       border-radius: 10px;
     }
     h1 {
+      font-family: 'Press Start 2P', cursive;
       font-size: 8rem;
       margin: 0;
       padding: 0;
       text-align: center;
-      color: black;
+      color: #fbff00;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: black;
     }
-  
+    audio {
+      margin: 50px 0;
+    }
     img {
       width: 100%;
+    }
+    .gif {
+      height: 30vh;
+      width: auto;
+      position: relative;
     }
   }
 }
@@ -47,9 +65,11 @@ header {
 
 main {
   display: flex;
-  height: 100vh;
   align-items: center;
   justify-content: center;
+  padding: 100px 0;
+  background-image: url(../assets/mainBG.png);
+  background-size: cover;
 }
 
 .wrapper {
@@ -61,7 +81,6 @@ main {
 .pokedex {
   max-width: 40vw;
   min-width: 400px;
-
   border: 8px black solid;
   border-radius: 20px;
 }
@@ -169,12 +188,20 @@ background-size: cover;
     }
     .evolutions {
         grid-column: span 2;
+        li {
+          border: 1px grey solid;
+          border-top: 0;
+          border-left: 0;
+          border-radius: 5px;
+          padding: 10px;
+          background-color: #f0f0f0;
+        }
     }
     .btnContainer {
       grid-column: span 2;
       .btnRandom {
         width: 60%;
-        padding: 10px 0;
+        padding: 10px;
       }
     }
     .height p,
@@ -184,8 +211,10 @@ background-size: cover;
     
 }
 
+// 
+
 h4 {
-    margin: 0;
+  margin: 7px 0;
   font-size: 2.5rem;
 }
 
@@ -196,13 +225,66 @@ ol {
   font-size: 1.5rem;
 }
 
+ol {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 li {
   list-style-type: none;
   text-transform: capitalize;
 }
 
+.pokemonTypes li {
+  padding: 5px 0;
+  margin: 5px 0;
+  text-align: center;
+}
+
+p,
+a,
+ul {
+  font-size: 2rem;
+}
+
 p {
   margin: 0;
-  font-size: 1.6rem;
   text-transform: capitalize;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+button {
+  font-size: 1.8rem;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus
+a:hover,
+a:focus {
+  transform: scale(1.2);
+  transition: all 0.1s;
+}
+
+a:hover,
+a:focus {
+  font-weight: bold;
+}
+
+.getStarted {
+    box-shadow: 5px 5px 10px;
+    color: black;
+    background-color: #A9E368;
+    border: 1px black solid;
+  }
+
+
+

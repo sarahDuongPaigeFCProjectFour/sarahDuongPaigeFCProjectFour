@@ -130,11 +130,36 @@ pokedexApp.clearInfo = function () {
   $("ol").empty();
 };
 
+// Pokemon Type Colors
+
+pokedexApp.pokemonTypeColors = {
+  fire: "#F08030",
+  grass: "#78C850",
+  water: "#6890F0",
+  electric: "#F8D030",
+  ground: "#E0C068",
+  flying: "#A890F0",
+  ghost: "#705898",
+  normal: "#A8A878",
+  fighting: "#C03028",
+  rock: "#B8A038",
+  poison: "#A040A0",
+  bug: "#A8B820",
+  steel: "#B8B8D0",
+  psychic: "#F85888",
+  ice: "#98D8D8",
+  dragon: "#7038F8",
+  dark: "#705848",
+  fairy: "#EE99AC",
+};
+
 // runs a for each loop, as there will be more than one object if pokemon has more than one type. adds to the ul with the type information.
 pokedexApp.checkTypes = function (pokeNum) {
   pokeNum.types.forEach((element) => {
     const listItem = $("<li>");
     listItem.text(element.type.name);
+    const currentType = element.type.name;
+    listItem.css("background-color", pokedexApp.pokemonTypeColors[currentType]);
     $("#pokemonType").append(listItem);
   });
 };

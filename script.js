@@ -12,7 +12,7 @@ pokedexApp.init = function () {
       {
         scrollTop: $(".pokedex").offset().top,
       },
-      2000
+      1500
     );
     pokedexApp.buttonRandom();
   });

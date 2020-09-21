@@ -6,14 +6,6 @@ pokedexApp.init = function () {
   $("main").hide();
   // event listener for the button at the top and bottom of screen for user to select a random pokemon.
   $(".btnRandom").on("click", function () {
-    $("main").show();
-    // smooth scroll animation
-    $("html, body").animate(
-      {
-        scrollTop: $(".pokedex").offset().top,
-      },
-      1500
-    );
     pokedexApp.buttonRandom();
   });
   $(".btnSubmit").on("click", function (e) {

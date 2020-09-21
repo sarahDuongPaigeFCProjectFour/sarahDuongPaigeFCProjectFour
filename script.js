@@ -132,7 +132,7 @@ pokedexApp.displayInfo = function (poke) {
   const heightCM = poke.height * 10;
   $("#pokeHeight").text(`${heightCM} cm`);
   // Weight
-  const weightKG = poke.weight * 0.1;
+  const weightKG = (poke.weight * 0.1).toFixed(2);
   $("#pokeWeight").text(`${weightKG} kg`);
   // Photo (main image)
   const mainImage = poke.sprites.other["official-artwork"].front_default;

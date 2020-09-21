@@ -3,13 +3,46 @@ const pokedexApp = {};
 
 // creating .init
 pokedexApp.init = function () {
-  const pokeNum = pokedexApp.genRandomNum();
-  pokedexApp.pokemonInfo(pokeNum);
+  $("main").hide();
+  // event listener for the button at the top and bottom of screen for user to select a random pokemon.
   $(".btnRandom").on("click", function () {
+    $("main").show();
+    // smooth scroll animation
+    $("html, body").animate(
+      {
+        scrollTop: $(".pokedex").offset().top,
+      },
+      2000
+    );
     pokedexApp.buttonRandom();
   });
+  $(".btnSubmit").on("click", function (e) {
+    e.preventDefault();
+    // error handling
+    const userInput = $("#userPokeNum").val();
+    // conditional statement to validate user input
+    if (userInput <= 0) {
+      alert(
+        "0 or negative numbers are not valid Pokemon IDs! Please enter a number from 1-494"
+      );
+    } else if (userInput > 494) {
+      alert(
+        "Currently only supporting first 4 Pokemon generations. Please enter a valid number from 1-494"
+      );
+    } else {
+      pokedexApp.pokemonInfo(userInput);
+      $("main").show();
+      // scrolling button animation
+      $("html, body").animate(
+        {
+          scrollTop: $("main").offset().top,
+        },
+        2000
+      );
+    }
+  });
 
-  // event listener for click to display clicked pokemon
+  // event listener for click to display selected pokemon
 };
 
 // function using ID. ID param will be generated with genrandomnum function when called.
@@ -58,19 +91,7 @@ pokedexApp.pokemonEvolutions = function (id) {
   });
 };
 
-// pokedexApp.flavorText = function(result) {
-//   console.log(result)
-//   result.flavor_text_entries.forEach(key => {
-//     console.log(key);
-//     console.log(key.language);
-//     if(key.language.name === 'en') {
-//       console.log(key.flavor_text);
-//       const flavorText = key.flavor_text;
-//       return flavorText;
-//     }
-//   });
-// }
-
+// function to show the evolution chains.
 pokedexApp.showEvolutions = function (result) {
   // storing base evolution name, and the base link to make it easier to chain things.
   const baseEvoLink = result.chain;
@@ -95,7 +116,7 @@ pokedexApp.showEvolutions = function (result) {
   }
 };
 
-// Append function
+// Append information unction
 
 pokedexApp.displayInfo = function (poke) {
   this.clearInfo();
@@ -131,7 +152,6 @@ pokedexApp.clearInfo = function () {
 };
 
 // Pokemon Type Colors
-
 pokedexApp.pokemonTypeColors = {
   fire: "#F08030",
   grass: "#78C850",
@@ -193,9 +213,10 @@ pokedexApp.buttonRandom = function () {
 
 // TODO random num function from 1-151
 pokedexApp.genRandomNum = function () {
-  return Math.floor(Math.random() * 151) + 1;
+  return Math.floor(Math.random() * 494) + 1;
 };
 
+// document ready
 $(document).ready(function () {
   pokedexApp.init();
 });

@@ -243,6 +243,103 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 30%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  margin: 0;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+h4 {
+  margin: 5px 0;
+  font-size: 2.5rem;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+ol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+li {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+p,
+a,
+ul {
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+button {
+  font-size: 1.8rem;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+a:hover,
+a:focus {
+  font-weight: bold;
+}
+
+.btnRandom,
+.btnSubmit {
+  -webkit-box-shadow: 5px 5px 10px;
+          box-shadow: 5px 5px 10px;
+  color: black;
+  background-color: #a9e368;
+  border: 1px black solid;
+}
+
 header {
   height: 100vh;
   background-image: url("../assets/skyBackground.jpg");
@@ -272,12 +369,31 @@ header .headerContent {
   height: 100vh;
 }
 
-header .headerContent .getStarted {
+header .headerContent .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .headerContent .container form button {
+  width: 100%;
+}
+
+header .headerContent .btnGetStarted {
   margin-top: 50px;
 }
 
 header .headerContent button {
-  width: 40%;
   font-size: 3rem;
   padding: 10px 0;
   border-radius: 10px;
@@ -319,13 +435,7 @@ main {
   background-size: cover;
 }
 
-.wrapper {
-  margin: 0 auto;
-  max-width: 1080px;
-  width: 30%;
-}
-
-.pokedex {
+main .pokedex {
   max-width: 50vw;
   min-width: 400px;
   border: 8px black solid;
@@ -333,25 +443,46 @@ main {
   background-color: #ee1515;
 }
 
-.window {
+main .window {
   color: white;
 }
 
-.windowWrapper {
+main .window .windowWrapper {
   margin: 0 auto;
   width: 90%;
   max-width: 100%;
 }
 
-h2 {
-  margin: 0;
-  font-size: 3.5rem;
-  text-transform: capitalize;
+.windowContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-h3 {
+.windowContainer .container {
+  margin-top: 20px;
+}
+
+.windowContainer .container .pokemonTypes li {
+  padding: 5px 0;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.windowContainer .spriteContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.windowContainer .spriteContainer .sprites {
+  height: 75px;
+  width: 75px;
   margin: 0;
-  font-size: 2.5rem;
 }
 
 .imageContainer {
@@ -370,7 +501,7 @@ h3 {
           align-items: center;
 }
 
-.image {
+.imageContainer .image {
   background: white;
   border: 3px black solid;
   border-radius: 50%;
@@ -379,35 +510,9 @@ h3 {
   z-index: 2;
 }
 
-img {
+.imageContainer img {
   width: 100%;
   height: 100%;
-}
-
-.windowContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.windowContainer .container {
-  margin-top: 20px;
-}
-
-.spriteContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 20px;
-}
-
-.sprites {
-  height: 75px;
-  width: 75px;
-  margin: 0;
 }
 
 .info {
@@ -420,7 +525,7 @@ img {
   padding: 50px 0;
 }
 
-.infoWrapper {
+.info .infoWrapper {
   margin: 0 auto;
   max-width: 100%;
   width: 80%;
@@ -447,6 +552,7 @@ img {
 }
 
 .infoGrid .evolutions li {
+  margin: 10px 0;
   border: 1px grey solid;
   border-top: 0;
   border-left: 0;
@@ -469,81 +575,15 @@ img {
   text-transform: lowercase;
 }
 
-h4 {
-  margin: 7px 0;
-  font-size: 2.5rem;
-}
-
-ul,
-ol {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
   margin: 0;
-  padding: 0;
-  font-size: 1.5rem;
+  /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-ol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-li {
-  list-style-type: none;
-  text-transform: capitalize;
-}
-
-.pokemonTypes li {
-  padding: 5px 0;
-  margin: 5px 0;
-  text-align: center;
-}
-
-p,
-a,
-ul {
-  font-size: 2rem;
-}
-
-p {
-  margin: 0;
-  text-transform: capitalize;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-}
-
-button {
-  font-size: 1.8rem;
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-
-button:hover,
-button:focus a:hover,
-a:focus {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: all 0.1s;
-  transition: all 0.1s;
-}
-
-a:hover,
-a:focus {
-  font-weight: bold;
-}
-
-.getStarted {
-  -webkit-box-shadow: 5px 5px 10px;
-          box-shadow: 5px 5px 10px;
-  color: black;
-  background-color: #a9e368;
-  border: 1px black solid;
+input[type="number"] {
+  -moz-appearance: textfield;
+  /* Firefox */
 }

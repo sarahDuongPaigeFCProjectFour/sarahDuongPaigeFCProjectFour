@@ -14,7 +14,17 @@
       <div class="headerWrapper">
         <div class="headerContent">
           <h1>Pokemon Generator</h1>
-          <button class="getStarted">Let's start!</button>
+          <div class="container">
+          	<button class="btnRandom">Show me a random Poke!</button>
+          	<h2>OR</h2>
+          	<form>
+          	  <fieldset>
+          	    <label for="userPokeNum">Input your pokemon number!</label>
+          	    <input type="number" name="userPokeNum" id="userPokeNum">
+          	    <button type="submit" class="btnSubmit">Submit!</button>
+          	  </fieldset>
+          	</form>
+          </div>
           <audio controls>
             <source src="./assets/pokeMusic.mp3" type="audio/mpeg">
           </audio>

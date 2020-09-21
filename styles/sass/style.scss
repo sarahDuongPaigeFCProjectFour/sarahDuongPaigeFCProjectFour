@@ -1,6 +1,6 @@
 @import "setup";
 
-// HTML
+// HTML, basic styles/stripping styles.
 
 html {
   font-size: 62.5%;
@@ -8,6 +8,98 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1080px;
+  width: 30%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  margin: 0;
+  font-size: 3.5rem;
+  text-transform: capitalize;
+}
+
+h3 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+//
+
+h4 {
+  margin: 5px 0;
+  font-size: 2.5rem;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+ol {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+li {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+
+p,
+a,
+ul {
+  font-size: 2rem;
+}
+
+p {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+// button and link styles with hover/focus states 
+a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+}
+
+button {
+  font-size: 1.8rem;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover,
+button:focus,
+ a:hover,
+a:focus {
+  transform: scale(1.2);
+  transition: all 0.1s;
+}
+
+a:hover,
+a:focus {
+  font-weight: bold;
+}
+
+.btnRandom,
+.btnSubmit {
+  box-shadow: 5px 5px 10px;
+  color: black;
+  background-color: #a9e368;
+  border: 1px black solid;
 }
 
 // HEADER aka landing page
@@ -27,11 +119,19 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    .getStarted {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      form button {
+        width: 100%;
+      }
+    }
+    .btnGetStarted {
       margin-top: 50px;
     }
     button {
-      width: 40%;
       font-size: 3rem;
       padding: 10px 0;
       border-radius: 10px;
@@ -66,46 +166,45 @@ main {
   padding: 75px 0;
   background-image: url(../assets/mainBG.png);
   background-size: cover;
+  .pokedex {
+    max-width: 50vw;
+    min-width: 400px;
+    border: 8px black solid;
+    border-radius: 20px;
+    background-color: #ee1515;
+  }
+  .window {
+    color: white;
+    .windowWrapper {
+      margin: 0 auto;
+      width: 90%;
+      max-width: 100%;
+    }
+  }
 }
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 1080px;
-  width: 30%;
+// sprite container
+.windowContainer {
+  display: flex;
+  justify-content: space-between;
+  .container {
+    margin-top: 20px;
+    .pokemonTypes li {
+      padding: 5px 0;
+      margin: 5px 0;
+      text-align: center;
+    }
+  }
+  .spriteContainer {
+    display: flex;
+    margin-top: 20px;
+    .sprites {
+      height: 75px;
+      width: 75px;
+      margin: 0;
+    }
+  }
 }
-
-.pokedex {
-  max-width: 50vw;
-  min-width: 400px;
-  border: 8px black solid;
-  border-radius: 20px;
-  background-color: #ee1515;
-}
-
-// WINDOW, top of pokedex
-.window {
-  color: white;
-}
-
-.windowWrapper {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 100%;
-}
-
-h2 {
-  margin: 0;
-  font-size: 3.5rem;
-  text-transform: capitalize;
-}
-
-h3 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
 // IMAGE AND IMAGE CONTAINER
-
 .imageContainer {
   display: flex;
   margin-bottom: -60px;
@@ -114,39 +213,18 @@ h3 {
   width: 100%;
   justify-content: center;
   align-items: center;
-}
-
-.image {
-  background: white;
-  border: 3px black solid;
-  border-radius: 50%;
-  height: 200px;
-  width: 200px;
-  z-index: 2;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-}
-
-// sprite container
-
-.windowContainer {
-  display: flex;
-  justify-content: space-between;
-  .container {
-    margin-top: 20px;
+  .image {
+    background: white;
+    border: 3px black solid;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    z-index: 2;
   }
-}
-.spriteContainer {
-  display: flex;
-  margin-top: 20px;
-}
-.sprites {
-  height: 75px;
-  width: 75px;
-  margin: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 // INFO
@@ -156,19 +234,20 @@ img {
   border-radius: 10px;
   background-color: #ffffff;
   background-color: #ffffff;
+  // svg background
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(360,896,485)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23d9d9d9'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='674' height='561.7' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.06'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
   // background-attachment: fixed;
   background-size: cover;
   width: 100%;
   padding: 50px 0;
+  .infoWrapper {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 80%;
+  }
 }
 
-.infoWrapper {
-  margin: 0 auto;
-  max-width: 100%;
-  width: 80%;
-}
-
+// info grid section
 .infoGrid {
   text-align: center;
   display: grid;
@@ -181,6 +260,7 @@ img {
   .evolutions {
     grid-column: span 2;
     li {
+      margin: 10px 0;
       border: 1px grey solid;
       border-top: 0;
       border-left: 0;
@@ -202,76 +282,14 @@ img {
   }
 }
 
-//
-
-h4 {
-  margin: 7px 0;
-  font-size: 2.5rem;
+// found code on stack overflow to hide the arrows in the numbers input.
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  font-size: 1.5rem;
-}
-
-ol {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-li {
-  list-style-type: none;
-  text-transform: capitalize;
-}
-
-.pokemonTypes li {
-  padding: 5px 0;
-  margin: 5px 0;
-  text-align: center;
-}
-
-p,
-a,
-ul {
-  font-size: 2rem;
-}
-
-p {
-  margin: 0;
-  text-transform: capitalize;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  display: inline-block;
-}
-
-button {
-  font-size: 1.8rem;
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-
-button:hover,
-button:focus a:hover,
-a:focus {
-  transform: scale(1.2);
-  transition: all 0.1s;
-}
-
-a:hover,
-a:focus {
-  font-weight: bold;
-}
-
-.getStarted {
-  box-shadow: 5px 5px 10px;
-  color: black;
-  background-color: #a9e368;
-  border: 1px black solid;
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }

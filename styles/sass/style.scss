@@ -375,6 +375,13 @@ footer {
   .infoGrid .btnContainer .btnRandom {
     width: 100%;
   }
+  button:hover,
+  button:focus,
+  a:hover,
+  a:focus {
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 420px) {

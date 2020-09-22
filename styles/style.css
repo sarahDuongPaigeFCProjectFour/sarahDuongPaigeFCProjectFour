@@ -235,12 +235,6 @@ html {
   overflow: hidden;
 }
 
-@media (max-width: 700px) {
-  header .headerContent h1 {
-    color: red;
-  }
-}
-
 html {
   font-size: 62.5%;
 }
@@ -376,22 +370,6 @@ header .headerContent {
 }
 
 header .headerContent .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header .headerContent .container form button {
   width: 100%;
 }
 
@@ -399,10 +377,30 @@ header .headerContent .btnGetStarted {
   margin-top: 50px;
 }
 
+header .headerContent form {
+  width: 100%;
+}
+
+header .headerContent label {
+  padding: 15px;
+  font-size: 3.5rem;
+}
+
+header .headerContent input {
+  width: 75%;
+  font-size: 4.5rem;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 header .headerContent button {
   font-size: 3rem;
   padding: 10px 0;
   border-radius: 10px;
+  width: 20%;
+  margin: 0;
 }
 
 header .headerContent h1 {
@@ -594,8 +592,57 @@ input[type="number"] {
   /* Firefox */
 }
 
-@media (max-width: 700px) {
+footer {
+  text-align: center;
+}
+
+footer p {
+  text-transform: lowercase;
+}
+
+footer a {
+  color: green;
+}
+
+@media (max-width: 906px) {
+  * {
+    border: 1px red solid;
+  }
   header .headerContent h1 {
-    color: red;
+    font-size: 5rem;
+  }
+  audio {
+    display: none;
+  }
+  form {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0;
+  }
+  form fieldset {
+    border: none;
+  }
+  form fieldset input {
+    width: 100%;
+  }
+  form fieldset .btnSubmit {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  header .headerContent h1 {
+    font-size: 3.5rem;
+    padding: 10px;
+  }
+  header .headerContent input {
+    width: 100%;
+  }
+  * {
+    border: 1px blue solid;
+  }
+  .pokedex {
+    width: 50vw;
   }
 }

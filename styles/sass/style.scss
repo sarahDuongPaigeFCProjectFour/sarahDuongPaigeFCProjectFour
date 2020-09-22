@@ -1,5 +1,4 @@
 @import "setup";
-@import "media";
 
 // HTML, basic styles/stripping styles.
 
@@ -121,22 +120,35 @@ header {
     align-items: center;
     height: 100vh;
     .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      form button {
-        width: 100%;
-      }
+      width: 100%;
     }
     .btnGetStarted {
       margin-top: 50px;
+    }
+    // EDITING SHIT HERE
+    form {
+      width: 100%;
+    }
+    label {
+      padding: 15px;
+      font-size: 3.5rem;
+    }
+    input {
+      width: 75%;
+      font-size: 4.5rem;
+      border: 1px solid lightgrey;
+      border-radius: 5px;
+      margin: 0 5px;
+      background-color: rgba(255,255,255, 0.5);
     }
     button {
       font-size: 3rem;
       padding: 10px 0;
       border-radius: 10px;
+      width: 20%;
+      margin: 0;
     }
+    // END EDITS
     h1 {
       font-family: "Press Start 2P", cursive;
       font-size: 8rem;
@@ -295,9 +307,66 @@ input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
+// FOOTER 
 
-@media (max-width: 700px){
-  header .headerContent h1{
-    color: red;
+footer {
+  text-align: center;
+  p {
+    text-transform: lowercase;
   }
+  a {
+    color: green;
+  }
+}
+
+// TABLET MEDIA QUERY
+
+@media (max-width: 906px){
+  *{
+    border: 1px red solid;
+  }
+  header .headerContent h1{
+    font-size: 5rem;
+  }
+  audio {
+    display: none;
+  }
+  form {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0;
+    fieldset {
+      border: none;
+      input {
+        width: 100%;
+      }
+      .btnSubmit{
+        margin: 10px 0;
+        width: 100%;
+      }
+    }
+  }
+  
+  
+}
+
+@media (max-width: 500px){
+  // Header
+  header .headerContent h1 {
+    font-size: 3.5rem;
+    padding: 10px;
+  };
+
+  header .headerContent input {
+    width: 100%;
+  }
+
+* {
+  border: 1px blue solid;
+}
+
+.pokedex {
+  width: 50vw;
+}
+  
 }

@@ -381,6 +381,17 @@ header .headerContent form {
   width: 100%;
 }
 
+header .headerContent form fieldset {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 header .headerContent label {
   padding: 15px;
   font-size: 3.5rem;
@@ -391,7 +402,6 @@ header .headerContent input {
   font-size: 4.5rem;
   border: 1px solid lightgrey;
   border-radius: 5px;
-  margin: 0 5px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -594,6 +604,7 @@ input[type="number"] {
 
 footer {
   text-align: center;
+  padding: 10px 0;
 }
 
 footer p {
@@ -605,11 +616,14 @@ footer a {
 }
 
 @media (max-width: 906px) {
-  * {
-    border: 1px red solid;
+  header .headerWrapper {
+    width: 90%;
   }
   header .headerContent h1 {
     font-size: 5rem;
+  }
+  header .headerContent input {
+    width: 100%;
   }
   audio {
     display: none;
@@ -621,9 +635,9 @@ footer a {
   }
   form fieldset {
     border: none;
-  }
-  form fieldset input {
-    width: 100%;
+    padding: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   form fieldset .btnSubmit {
     margin: 10px 0;
@@ -639,10 +653,25 @@ footer a {
   header .headerContent input {
     width: 100%;
   }
-  * {
-    border: 1px blue solid;
+  main .pokedex {
+    min-width: 400px;
   }
-  .pokedex {
-    width: 50vw;
+  .infoGrid .btnContainer .btnRandom {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  header .headerContent h1 {
+    padding: 0;
+  }
+  main .pokedex {
+    min-width: 100vw;
+  }
+  .info .infoWrapper {
+    width: 95%;
+  }
+  .windowContainer .spriteContainer {
+    display: none;
   }
 }

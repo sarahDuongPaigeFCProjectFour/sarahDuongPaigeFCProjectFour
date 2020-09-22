@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Pokemon Pokedex</title>
+    <link href="./assets/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -19,8 +20,8 @@
           </audio>
           <div class="container">
           	<form>
-              <!-- <label for="userPokeNum">Pick a number from 1-494!</label> -->
-          	  <fieldset>
+              <fieldset>
+                <label for="userPokeNum" class="sr-only">Pick a number from 1-494!</label>
           	    <input type="number" name="userPokeNum" id="userPokeNum" placeholder="Pick a number from 1-494!">
           	    <button type="submit" class="btnSubmit">Submit!</button>
           	  </fieldset>

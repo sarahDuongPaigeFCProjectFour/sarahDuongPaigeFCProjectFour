@@ -67,7 +67,7 @@ p {
   text-transform: capitalize;
 }
 
-// button and link styles with hover/focus states 
+// button and link styles with hover/focus states
 a {
   text-decoration: none;
   color: black;
@@ -83,7 +83,7 @@ button {
 
 button:hover,
 button:focus,
- a:hover,
+a:hover,
 a:focus {
   transform: scale(1.2);
   transition: all 0.1s;
@@ -128,6 +128,12 @@ header {
     // EDITING SHIT HERE
     form {
       width: 100%;
+      fieldset {
+        border: none;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-between;
+      }
     }
     label {
       padding: 15px;
@@ -138,8 +144,7 @@ header {
       font-size: 4.5rem;
       border: 1px solid lightgrey;
       border-radius: 5px;
-      margin: 0 5px;
-      background-color: rgba(255,255,255, 0.5);
+      background-color: rgba(255, 255, 255, 0.5);
     }
     button {
       font-size: 3rem;
@@ -307,10 +312,10 @@ input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
-// FOOTER 
-
+// FOOTER
 footer {
   text-align: center;
+  padding: 10px 0;
   p {
     text-transform: lowercase;
   }
@@ -320,13 +325,19 @@ footer {
 }
 
 // TABLET MEDIA QUERY
-
-@media (max-width: 906px){
-  *{
-    border: 1px red solid;
-  }
-  header .headerContent h1{
-    font-size: 5rem;
+@media (max-width: 906px) {
+  header {
+    .headerWrapper {
+      width: 90%;
+    }
+    .headerContent {
+      h1 {
+        font-size: 5rem;
+      }
+      input {
+        width: 100%;
+      }
+    }
   }
   audio {
     display: none;
@@ -337,36 +348,46 @@ footer {
     margin: 30px 0;
     fieldset {
       border: none;
-      input {
-        width: 100%;
-      }
-      .btnSubmit{
+      padding: 0;
+      flex-wrap: wrap;
+      .btnSubmit {
         margin: 10px 0;
         width: 100%;
       }
     }
   }
-  
-  
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   // Header
   header .headerContent h1 {
     font-size: 3.5rem;
     padding: 10px;
-  };
+  }
 
   header .headerContent input {
     width: 100%;
   }
 
-* {
-  border: 1px blue solid;
+  main .pokedex {
+    min-width: 400px;
+  }
+  .infoGrid .btnContainer .btnRandom {
+    width: 100%;
+  }
 }
 
-.pokedex {
-  width: 50vw;
-}
-  
+@media (max-width: 420px) {
+  header .headerContent h1 {
+    padding: 0;
+  }
+  main .pokedex {
+    min-width: 100vw;
+  }
+  .info .infoWrapper {
+    width: 95%;
+  }
+  .windowContainer .spriteContainer {
+    display: none;
+  }
 }

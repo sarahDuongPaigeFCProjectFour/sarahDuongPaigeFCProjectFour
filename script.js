@@ -109,7 +109,6 @@ pokedexApp.showEvolutions = function (result) {
 };
 
 // Append information unction
-
 pokedexApp.displayInfo = function (poke) {
   this.clearInfo();
   // Name and ID
